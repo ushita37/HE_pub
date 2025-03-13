@@ -24,25 +24,13 @@
 | MacBook Pro | macOS 15.2 | CMake 3.31.3 + LLVM Clang 19.1.6 | Apple M3 Pro |
 
 # 実行環境構築
-サーバの場合:
-まずは以下のコマンドを実行する。
+サーバの場合: 
+以下のコマンドを実行する。
 ```
 mkdir seal_install
 git clone https://github.com/microsoft/SEAL.git
 cd SEAL
-```
-
-特定のディレクトリseal_installにインストールする場合は以下のコマンドを実行する。
-```
 cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON -DSEAL_BUILD_TESTS=ON -DSEAL_BUILD_BENCH=ON -DCMAKE_INSTALL_PREFIX=~/seal_install
-```
-そうでない場合は以下のコマンドを実行する。
-```
-cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON -DSEAL_BUILD_TESTS=ON -DSEAL_BUILD_BENCH=ON
-```
-
-最後に以下のコマンドを実行する。
-```
 cmake --build build
 sudo cmake --install build
 ```
@@ -52,7 +40,6 @@ sudo cmake --install build
 cd ~/SEAL/build/bin
 ./sealtest
 ```
-Raspberry Piの場合:
 
 MacBook Proの場合:
 1. ターミナルを開き、cmakeとXcode toolchainが入っているかを確認する。ない場合はインストールする。
