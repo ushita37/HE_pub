@@ -25,7 +25,33 @@
 
 # 実行環境構築
 サーバの場合:
+まずは以下のコマンドを実行する。
+```
+mkdir seal_install
+git clone https://github.com/microsoft/SEAL.git
+cd SEAL
+```
 
+特定のディレクトリseal_installにインストールする場合は以下のコマンドを実行する。
+```
+cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON -DSEAL_BUILD_TESTS=ON -DSEAL_BUILD_BENCH=ON -DCMAKE_INSTALL_PREFIX=~/seal_install
+```
+そうでない場合は以下のコマンドを実行する。
+```
+cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON -DSEAL_BUILD_TESTS=ON -DSEAL_BUILD_BENCH=ON
+```
+
+最後に以下のコマンドを実行する。
+```
+cmake --build build
+sudo cmake --install build
+```
+
+テストは以下のコマンドを実行して行う。
+```
+cd ~/SEAL/build/bin
+./sealtest
+```
 Raspberry Piの場合:
 
 MacBook Proの場合:
