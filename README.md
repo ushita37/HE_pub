@@ -23,6 +23,28 @@
 | Raspberry Pi 5 | Debian 12.8 | CMake 3.25.1 + GNU GCC 12.2.0 | Arm Cortex A76 |
 | MacBook Pro | macOS 15.2 | CMake 3.31.3 + LLVM Clang 19.1.6 | Apple M3 Pro |
 
+# 実行環境構築
+サーバの場合:
+
+Raspberry Piの場合:
+
+MacBook Proの場合:
+1. ターミナルを開き、cmakeとXcode toolchainが入っているかを確認する。ない場合はインストールする。
+2. Microsoft SEALをインストールするためのディレクトリ(例としてms_seal)を作成し、以下を実行する。
+```
+cd ms_seal
+git clone https://github.com/microsoft/SEAL.git
+cmake -S . -B build
+cmake --build build
+sudo cmake --install build
+```
+
+テストとしてexamplesを実行する場合は、以下のコマンドを実行する。
+```
+cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON
+cmake --build build
+./sealexamples
+```
 
 # 実行方法
 それぞれのプログラムに対応するディレクトリに移動した後、以下のコマンドでビルドする。
