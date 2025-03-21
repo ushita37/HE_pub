@@ -29,10 +29,10 @@ Please refer to README-English.md for a description in English.
 サーバの場合: 
 以下のコマンドを実行する。
 ```
-mkdir seal_install
+mkdir seal_install_dir
 git clone https://github.com/microsoft/SEAL.git
 cd SEAL
-cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON -DSEAL_BUILD_TESTS=ON -DSEAL_BUILD_BENCH=ON -DCMAKE_INSTALL_PREFIX=~/seal_install
+cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON -DSEAL_BUILD_TESTS=ON -DSEAL_BUILD_BENCH=ON -DCMAKE_INSTALL_PREFIX=~/seal_install_dir
 cmake --build build
 sudo cmake --install build
 ```
@@ -45,9 +45,9 @@ cd ~/SEAL/build/bin
 
 MacBook Proの場合:
 1. ターミナルを開き、cmakeとXcode toolchainが入っているかを確認する。ない場合はインストールする。
-2. Microsoft SEALをインストールするためのディレクトリ(例としてms_seal)を作成し、以下を実行する。
+2. Microsoft SEALをインストールするためのディレクトリ(例として~/seal_install_dir)を作成し、以下を実行する。
 ```
-cd ms_seal
+cd ~/seal_install_dir
 git clone https://github.com/microsoft/SEAL.git
 cmake -S . -B build
 cmake --build build
@@ -70,9 +70,9 @@ cmake --build build
 ```
 
 
-Microsoft SEALを特定のディレクトリ`~/seal_install`にインストールした場合
+Microsoft SEALを特定のディレクトリ`~/seal_install_dir`にインストールした場合
 ```
-cmake -S . -B build -DCMAKE_PREFIX_PATH=~/seal_install
+cmake -S . -B build -DCMAKE_PREFIX_PATH=~/seal_install_dir
 cmake --build build
 ```
 

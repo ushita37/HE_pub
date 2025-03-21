@@ -10,12 +10,12 @@ The programs in this repository are listed below.
 | --- | ------------- | ------------- | ---- |
 | 1 | matrix mult. | x | x |
 | 2 | matrix mult. | x | o |
-| 3 | matrix mult. | o (CKKSscheme) | x |
-| 4 | matrix mult. | o (CKKSscheme) | o |
+| 3 | matrix mult. | o (CKKS scheme) | x |
+| 4 | matrix mult. | o (CKKS scheme) | o |
 | 5 | convolution | x | x |
 | 6 | convolution | x | o |
-| 7 | convolution | o (CKKSscheme) | x |
-| 8 | convolution | o (CKKSscheme) | o |
+| 7 | convolution | o (CKKS scheme) | x |
+| 8 | convolution | o (CKKS scheme) | o |
 
 
 # Execution Environment
@@ -31,10 +31,10 @@ This software has been tested in the following environment.
 In the case of the server: 
 Execute the following commands.
 ```
-mkdir seal_install
+mkdir seal_install_dir
 git clone https://github.com/microsoft/SEAL.git
 cd SEAL
-cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON -DSEAL_BUILD_TESTS=ON -DSEAL_BUILD_BENCH=ON -DCMAKE_INSTALL_PREFIX=~/seal_install
+cmake -S . -B build -DSEAL_BUILD_EXAMPLES=ON -DSEAL_BUILD_TESTS=ON -DSEAL_BUILD_BENCH=ON -DCMAKE_INSTALL_PREFIX=~/seal_install_dir
 cmake --build build
 sudo cmake --install build
 ```
@@ -47,9 +47,9 @@ cd ~/SEAL/build/bin
 
 In the case of MacBook Pro:
 1. Open a terminal and check if the CMake and the Xcode toolchain are included. If not, install them.
-2. Create a directory to install Microsoft SEAL (e.g. ms_seal) and execute the following.
+2. Create a directory to install Microsoft SEAL (e.g. ~/seal_install_dir) and execute the following.
 ```
-cd ms_seal
+cd ~/seal_install_dir
 git clone https://github.com/microsoft/SEAL.git
 cmake -S . -B build
 cmake --build build
@@ -72,9 +72,9 @@ cmake --build build
 ```
 
 
-If Microsoft SEAL is installed in the specific directory `~/seal_install`: 
+If Microsoft SEAL is installed in the specific directory `~/seal_install_dir`: 
 ```
-cmake -S . -B build -DCMAKE_PREFIX_PATH=~/seal_install
+cmake -S . -B build -DCMAKE_PREFIX_PATH=~/seal_install_dir
 cmake --build build
 ```
 
