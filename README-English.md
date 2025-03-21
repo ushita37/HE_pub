@@ -1,10 +1,10 @@
 # About this repository
 
-This repository uses Microsoft SEAL (CKKS Scheme) to implement matrix multiplication and convolution. It aims to measure execution time of major calculations in Homomorphic Encryption (HE) and works as a benchmark.
+This repository uses Microsoft SEAL (CKKS Scheme) to implement matrix multiplication and convolution. It aims to measure the execution time of major calculations in Homomorphic Encryption (HE) and works as a benchmark.
 
-Half of programs in this repository supports parallel execution with OpenMP. 
+Half of the programs in this repository support parallel execution with OpenMP.
 
-The programs in this repository is listed below.
+The programs in this repository are listed below.
 
 | Number　| kind of calcuration | encryption | parallel execution |
 | --- | ------------- | ------------- | ---- |
