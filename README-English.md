@@ -63,30 +63,30 @@ cmake --build build
 ./sealexamples
 ```
 
-# 実行方法
-それぞれのプログラムに対応するディレクトリに移動した後、以下のコマンドでビルドする。
-Microsoft SEALをグローバルにインストールした場合
+# Procedure for Execution
+After moving to the directory corresponding to the respective program, build it with the following command.
+If Microsoft SEAL is installed globally: 
 ```
 cmake -S . -B build
 cmake --build build
 ```
 
 
-Microsoft SEALを特定のディレクトリ`~/seal_install`にインストールした場合
+If Microsoft SEAL is installed in the specific directory `~/seal_install`: 
 ```
 cmake -S . -B build -DCMAKE_PREFIX_PATH=~/seal_install
 cmake --build build
 ```
 
 
-ビルドが完了したら、以下のコマンドで実行する。
-行列積のプログラムを実行する場合（例えば、2つの行列のサイズを32×32とする場合）
+When the build is complete, run the following command.
+When executing a matrix multiplication program (e.g. when the sizes of the two matrices are 32×32): 
 ```
 ./build/main 32 32 32
 ```
 
 
-畳み込みのプログラムを実行する場合（例えば、入力行列のサイズが32×32、カーネルのサイズが16×16の場合）
+When executing a convolution program (e.g. when the input matrix size is 32×32 and the kernel size is 16×16)
 ```
 ./build/main 32 16
 ```
