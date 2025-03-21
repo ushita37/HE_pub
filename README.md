@@ -1,3 +1,5 @@
+Please refer to README-English.md for a description in English.
+
 # リポジトリの目的
 ここでは、完全準同型暗号のライブラリMicrosort SEALを使用して、行列積と畳み込みを計算するプログラムを実装した。これらのプログラムはOpenMPを使用して並列実行することが可能である。
 
